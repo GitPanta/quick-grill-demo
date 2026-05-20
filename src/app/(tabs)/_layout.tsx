@@ -6,10 +6,17 @@ export default function TabLayout() {
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
       <Tabs.Screen
+        name="readings"
+        options={{
+          title: 'Sensores',
+          tabBarIcon: ({ color }) => <FontAwesome size={28} name="square" color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="asist"
         options={{
           title: 'Asistencia',
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
+          tabBarIcon: ({ color }) => <FontAwesome size={28} name="circle" color={color} />,
         }}
       />
       <Tabs.Screen
